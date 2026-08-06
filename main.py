@@ -223,14 +223,14 @@ async def subscribe(app, message):
         try:
           user = await app.get_chat_member(LOG_GROUP, message.from_user.id)
           if str(user.status) == "ChatMemberStatus.BANNED":
-              await message.reply_text("You are Banned. Contact -- Team SPY")
+              await message.reply_text("You are Banned. Contact -- Alpha World")
               return 1
         except UserNotParticipant:
             caption = f"Join our channel to use the bot"
             await message.reply_photo(photo="https://graph.org/file/d44f024a08ded19452152.jpg",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"https://t.me/AIpha_World")]]))
             return 1
         except Exception:
-            await message.reply_text("Something Went Wrong. Contact us Team SPY...")
+            await message.reply_text("Something Went Wrong. Contact us Alpha World...")
             return 1
 
 async def send_document_http(chat_id: int, file_id: str, caption: str):
@@ -1767,7 +1767,7 @@ async def stats_quiz(client, message):
         f"📚 **Total Quizzes Created:** `{total_quizzes}`\n"
         f"💰 **Paid Quizzes:** `{paid_quizzes}`\n"
         f"🎉 **Free Quizzes:** `{free_quizzes}`\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__Powered by Alpha World__**"
     )
     
 
