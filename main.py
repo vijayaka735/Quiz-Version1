@@ -85,7 +85,7 @@ filter_collection  = dbx.user_filters  # kept for compatibility
 BOT_API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # ── Constants ─────────────────────────────────────────────────────────────────
-chatn     = "quiz_zone_new"
+chatn     = "AIpha_World"
 PAGE_SIZE = 10
 
 # ── State ─────────────────────────────────────────────────────────────────────
@@ -227,7 +227,7 @@ async def subscribe(app, message):
               return 1
         except UserNotParticipant:
             caption = f"Join our channel to use the bot"
-            await message.reply_photo(photo="https://graph.org/file/d44f024a08ded19452152.jpg",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"https://t.me/quiz_zone_new")]]))
+            await message.reply_photo(photo="https://graph.org/file/d44f024a08ded19452152.jpg",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"https://t.me/AIpha_World")]]))
             return 1
         except Exception:
             await message.reply_text("Something Went Wrong. Contact us Team SPY...")
